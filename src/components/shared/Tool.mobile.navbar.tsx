@@ -1,21 +1,16 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+
 import {
     Sheet,
     SheetClose,
     SheetContent,
     SheetDescription,
-    SheetFooter,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { ToolNavbar } from "@/constants/index.c"
 import { AlignJustify } from "react-feather"
-import SidebarLink from "./SidebarLink"
-import NavButton from "./NavButton"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
@@ -30,9 +25,13 @@ export default function ToolMobileNavbar() {
                 <AlignJustify />
             </SheetTrigger>
             <SheetContent>
-                <SheetHeader>
-                    <SheetTitle className="text-primary">Influencer</SheetTitle>
-                    <SheetDescription>Main Menu</SheetDescription>
+                <SheetHeader className="flex flex-col">
+                    <SheetTitle className="text-primary">
+                        <Link href={'/'}>
+                            Influencer
+                        </Link>
+                    </SheetTitle>
+                    <SheetDescription className="text-xs">Main Menu</SheetDescription>
                 </SheetHeader>
                 <div className="w-full flex flex-col gap-1 my-10">
                     {ToolNavbar.map((item) => {
