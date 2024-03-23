@@ -1,5 +1,7 @@
+import Check from '@/components/shared/Check'
 import { Dashboard } from '@/components/shared/Dashboard'
 import ToolMobileNavbar from '@/components/shared/Tool.mobile.navbar'
+import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ToolNavbar } from '@/constants/index.c'
 import React from 'react'
@@ -10,23 +12,14 @@ const Page = ({ params }: { params: { tool: string } }) => {
 
     return (
 
-        <div className={'w-full'}>
-            <div className="h-8 flex justify-between items-center">
-                <div className="">
-                    <span className='text-xl font-bold'>{content.Label}</span>
-                </div>
-                <div className="hidden lg:flex items-center gap-5">
-                    <Input className='h-7 w-60 text-xs' placeholder='Search here...' />
-                    <Star className='w-4 h-4' />
-                    <Bell className='w-4 h-4' />
-                    <Settings className='w-4 h-4' />
-                </div>
-                <div className="lg:hidden ">
-                    <ToolMobileNavbar />
-                </div>
+        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+            <div className="flex items-center">
+                <h1 className="text-lg font-semibold md:text-2xl">{content.Label}</h1>
             </div>
-            {content.Label === "Dashboard" && <Dashboard />}
-        </div>
+            <div className="w-full">
+                {content.Label === "Dashboard" && <Dashboard />}
+            </div>
+        </main>
     )
 }
 

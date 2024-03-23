@@ -6,7 +6,7 @@ const SidebarLink = () => {
     return (
         <>
             {ToolNavbar.map((item) => {
-                return (
+                return ( 
                     <NavButton Label={item.Label} href={item.href} key={item.Label} />
                 )
             })}

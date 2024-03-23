@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 const NavButton = ({ href, Label }: { href: string, Label: string }) => {
     const pathname = usePathname();
     return (
-        <div className="w-full" key={Label}>
+        <div className="w-full">
             <Link href={href}>
                 <Button variant={'ghost'} className={cn('group w-full flex items-center gap-4 justify-start ', href === pathname && "bg-accent")}>
                     {
