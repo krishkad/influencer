@@ -11,10 +11,12 @@ import { SheetClose } from "../ui/sheet"
 export default function MobileNavlinks() {
     return (
         <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1" className="py-4 font-semibold">
-                <Link href={'/'}>
-                    Home
-                </Link>
+            <AccordionItem value="item-1" className="w-full py-4 font-semibold">
+                <SheetClose asChild className="w-full">
+                    <Link href={'/'} className="w-full">
+                        Home
+                    </Link>
+                </SheetClose>
             </AccordionItem>
             <AccordionItem value="item-2">
                 <AccordionTrigger className="focus:no-underline font-semibold">Features</AccordionTrigger>
