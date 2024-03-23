@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "dark")}>
+      <body className={cn(inter.className, "")}>
         <main className="w-full ">{children}</main>
       </body>
     </html>

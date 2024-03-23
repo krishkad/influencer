@@ -20,6 +20,9 @@ const Page = ({ params }: { params: { tool: string } }) => {
                     <Bell className='w-4 h-4' />
                     <Settings className='w-4 h-4' />
                 </div>
+                <div className="md:hidden ">
+                    <ToolMobileNavbar />
+                </div>
             </div>
         </div>
     )

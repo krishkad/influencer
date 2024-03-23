@@ -10,12 +10,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                     <ToolsSidebar />
                 </div>
                 <div className="w-full md:w-[82%] tools-wrapper md:pr-5">
-                    <div className="flex relative">
-                        <div className="md:hidden absolute top-[5px] right-0">
-                            <ToolMobileNavbar />
-                        </div>
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </main>
         </div>
