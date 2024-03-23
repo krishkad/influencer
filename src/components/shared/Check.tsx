@@ -38,6 +38,7 @@ import NavButton from "./NavButton"
 import { cn } from "@/lib/utils"
 import { Activity, Cpu, File, Folder, Grid, Paperclip, Share2 } from "react-feather"
 import { usePathname } from "next/navigation"
+import ToolsSidebar from "./Sidebar"
 
 export default function Check({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -98,29 +99,7 @@ export default function Check({ children }: { children: React.ReactNode }) {
                 </SheetTitle>
                 <SheetDescription className="text-xs">Main Menu</SheetDescription>
               </SheetHeader>
-              <div className="flex flex-col gap-1">
-                {/* <SidebarLink /> */}
-                {ToolNavbar.map((item) => {
-                  return <SheetClose asChild key={item.Label}>
-                    <Link href={item.href} >
-                      <div className={cn('h-10 px-4 py-2 group w-full flex items-center gap-4 justify-start ', item.href === pathname && "bg-accent")}>
-                        {
-                          item.Label === "Dashboard" && <Grid className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "Find Influencer" && <Search className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "Campaign Management" && <Folder className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "Contract Management" && <Paperclip className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "Content Collaboration" && <Share2 className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "Trend Identification" && <Activity className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "Report Generation" && <File className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                          item.Label === "AI Approaching" && <Cpu className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} />
-
-                        }
-                        <span className={cn('font-semibold text-muted-foreground group-hover:text-foreground text-xs p-0 m-0', item.href === pathname && 'text-foreground')}>{item.Label}</span>
-                      </div>
-                    </Link>
-                  </SheetClose>
-                })}
-              </div>
+              <ToolsSidebar />
               <div className="mt-auto">
                 <Card>
                   <CardHeader>
