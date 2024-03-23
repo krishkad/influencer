@@ -6,10 +6,10 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="w-full">
             <main className="w-full flex wrapper-2">
-                <div className="hidden md:block md:w-[18%] tools-wrapper h-screen border-r">
+                <div className="hidden lg:block lg:w-[22%] xl:w-[18%] tools-wrapper h-screen border-r">
                     <ToolsSidebar />
                 </div>
-                <div className="w-full md:w-[82%] tools-wrapper md:pr-5">
+                <div className="w-full lg:w-[78%] xl:w-[82%] tools-wrapper md:pr-5">
                     {children}
                 </div>
             </main>

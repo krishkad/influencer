@@ -1,3 +1,4 @@
+import { Dashboard } from '@/components/shared/Dashboard'
 import ToolMobileNavbar from '@/components/shared/Tool.mobile.navbar'
 import { Input } from '@/components/ui/input'
 import { ToolNavbar } from '@/constants/index.c'
@@ -12,18 +13,19 @@ const Page = ({ params }: { params: { tool: string } }) => {
         <div className={'w-full'}>
             <div className="h-8 flex justify-between items-center">
                 <div className="">
-                    <span className='text-lg font-bold'>{content.Label}</span>
+                    <span className='text-xl font-bold'>{content.Label}</span>
                 </div>
-                <div className="hidden md:flex items-center gap-5">
+                <div className="hidden lg:flex items-center gap-5">
                     <Input className='h-7 w-60 text-xs' placeholder='Search here...' />
                     <Star className='w-4 h-4' />
                     <Bell className='w-4 h-4' />
                     <Settings className='w-4 h-4' />
                 </div>
-                <div className="md:hidden ">
+                <div className="lg:hidden ">
                     <ToolMobileNavbar />
                 </div>
             </div>
+            {content.Label === "Dashboard" && <Dashboard />}
         </div>
     )
 }
