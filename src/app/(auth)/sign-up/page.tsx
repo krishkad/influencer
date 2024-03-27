@@ -72,6 +72,7 @@ export default function SignUpPage() {
                     src="/sign-up.jpg"
                     alt="Image"
                     fill
+                    priority
                     sizes="height:100%, width:100%"
                     className="h-full w-full object-cover object-bottom dark:brightness-[0.2] dark:grayscale"
                 />

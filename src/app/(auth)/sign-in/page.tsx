@@ -20,6 +20,7 @@ const LogInPage = () => {
         <Image
           src="/login-pic.jpg"
           alt="Image"
+          priority
           fill
           sizes="height:100%, width:100%"
           className="h-full w-full object-cover object-bottom dark:brightness-[0.2] dark:grayscale"
