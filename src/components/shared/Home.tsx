@@ -3,7 +3,7 @@ import { Button } from '../ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const  Hero = () => {
+const Hero = () => {
   return (
     <main className="w-full h-[calc(100vh-96px)]">
       <div className="w-full md:w-1/2 max-sm:h-2/5 md:h-52 mx-auto flex flex-col items-center justify-center text-center gap-2">
@@ -15,8 +15,8 @@ const  Hero = () => {
       </div>
       <div className="w-full max-sm:h-3/5 h-[calc(100%-208px)] flex justify-center">
         <div className="w-full sm:w-4/5 h-full relative overflow-y-hidden">
-          <Image src={'/desktop.png'} priority fill sizes='height: 100% , width: 100%' className="  hidden object-contain object-top  sm:block" alt='img' />
-          <Image src={'/mobile-mini.png'} priority fill sizes='height: 100% , width: 100%' className=" object-contain object-top sm:hidden" alt='img' />
+          <Image src={'/desktop-pic.png'} priority fill sizes='height: 100% , width: 100%' className="hidden object-contain object-top sm:block" alt='img' />
+          <Image src={'/mobile-mini.png'} priority fill sizes='height: 100% , width: 100%' className="block object-contain object-top sm:hidden" alt='img' />
         </div>
       </div>
     </main>
