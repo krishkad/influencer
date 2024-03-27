@@ -38,9 +38,11 @@ import { cn } from "@/lib/utils"
 import { Activity, Cpu, File, Folder, Grid, Paperclip, Share2 } from "react-feather"
 import SidebarLink from '@/components/shared/SidebarLink'
 import { usePathname } from 'next/navigation'
+import { useTheme } from 'next-themes'
 
 const AccessLayout = ({ children }: { children: React.ReactNode }) => {
     const pathname = usePathname();
+    const { theme, setTheme } = useTheme();
     return (
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
             <div className="hidden border-r md:block">
@@ -68,7 +70,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
-                                <Button size="sm" className="w-full text-sm">
+                                <Button size="sm" className="w-full text-sm text-white">
                                     Upgrade
                                 </Button>
                             </CardContent>
@@ -130,7 +132,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                         </CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <Button size="sm" className="w-full">
+                                        <Button size="sm" className="w-full text-white">
                                             Upgrade
                                         </Button>
                                     </CardContent>
@@ -162,6 +164,9 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>Settings</DropdownMenuItem>
                             <DropdownMenuItem>Support</DropdownMenuItem>
+                            <DropdownMenuItem>
+                                {theme === "light" ? <span onClick={()=> setTheme('dark')}>Dark Mode</span> : <span onClick={()=> setTheme("light")}>Light Mode</span>}
+                            </DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>Logout</DropdownMenuItem>
                         </DropdownMenuContent>

@@ -191,8 +191,8 @@ export function Dashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+2350</div>
-              <p className="text-xs text-muted-foreground">
-                +180.1% from last month
+              <p className="text-xs text-muted-foreground font-medium">
+                <span className="text-green-500">+180.1%</span> from last month
               </p>
             </CardContent>
           </Card>
@@ -203,8 +203,8 @@ export function Dashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+12,234</div>
-              <p className="text-xs text-muted-foreground">
-                +19% from last month
+              <p className="text-xs text-muted-foreground font-medium">
+                <span className=" text-green-500">+19%</span> from last month
               </p>
             </CardContent>
           </Card>
@@ -215,8 +215,8 @@ export function Dashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+573</div>
-              <p className="text-xs text-muted-foreground">
-                +201 since last hour
+              <p className="text-xs text-muted-foreground font-medium">
+                <span className="text-green-500">+201</span> since last hour
               </p>
             </CardContent>
           </Card>
@@ -224,8 +224,8 @@ export function Dashboard() {
         <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
           <Card className="xl:col-span-2">
             <CardHeader className="flex flex-row items-center">
-              <div className="grid gap-2">
-                <CardTitle>Transactions</CardTitle>
+              <div className="grid gap-0">
+                <CardTitle className="text-lg">Transactions</CardTitle>
                 <CardDescription>
                   Recent transactions from your store.
                 </CardDescription>
@@ -361,7 +361,7 @@ export function Dashboard() {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Recent Sales</CardTitle>
+              <CardTitle className="text-lg">Recent Sales</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-8">
               <div className="flex items-center gap-4">
@@ -373,7 +373,7 @@ export function Dashboard() {
                     Olivia Martin
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    olivia.martin@email.com
+                    olivia.martin@
                   </p>
                 </div>
                 <div className="ml-auto font-medium text-sm">+$1,999.00</div>
@@ -387,7 +387,7 @@ export function Dashboard() {
                     Jackson Lee
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    jackson.lee@email.com
+                    jackson.lee@
                   </p>
                 </div>
                 <div className="ml-auto font-medium text-sm">+$39.00</div>
@@ -401,7 +401,7 @@ export function Dashboard() {
                     Isabella Nguyen
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    isabella.nguyen@email.com
+                    isabella.nguyen@
                   </p>
                 </div>
                 <div className="ml-auto font-medium text-sm">+$299.00</div>
@@ -415,7 +415,7 @@ export function Dashboard() {
                     William Kim
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    will@email.com
+                    will@
                   </p>
                 </div>
                 <div className="ml-auto font-medium text-sm">+$99.00</div>
@@ -429,7 +429,7 @@ export function Dashboard() {
                     Sofia Davis
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    sofia.davis@email.com
+                    sofia.davis@
                   </p>
                 </div>
                 <div className="ml-auto font-medium text-sm">+$39.00</div>
