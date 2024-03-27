@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from "next/link"
 import {
     Bell,
@@ -42,7 +42,14 @@ import { useTheme } from 'next-themes'
 
 const AccessLayout = ({ children }: { children: React.ReactNode }) => {
     const pathname = usePathname();
-    const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false)
+    const { theme, setTheme } = useTheme()
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted) return null
     return (
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
             <div className="hidden border-r md:block">
