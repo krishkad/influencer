@@ -17,13 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className, "")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          // disableTransitionOnChange
         >
           <main className="w-full ">{children}</main>
         </ThemeProvider>

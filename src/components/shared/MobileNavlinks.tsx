@@ -7,7 +7,8 @@ import {
 import { ToolNavbar } from "@/constants/index.c"
 import Link from "next/link"
 import { SheetClose } from "../ui/sheet"
-import { Switch } from "../ui/switch"
+import DarkHomeSwitch from "./DarkHome"
+
 
 export default function MobileNavlinks() {
     return (
@@ -43,10 +44,7 @@ export default function MobileNavlinks() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="w-full py-4 font-semibold">
-                <div className="flex items-center space-x-2">
-                    <Switch id="airplane-mode" />
-                    <span className="font-medium">Dark Mode</span>
-                </div>
+                <DarkHomeSwitch />
             </AccordionItem>
         </Accordion>
     )
