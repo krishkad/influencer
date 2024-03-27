@@ -44,6 +44,21 @@ export default function MobileNavlinks() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="w-full py-4 font-semibold">
+                <Link href={'/'}>
+                    Plans
+                </Link>
+            </AccordionItem>
+            <AccordionItem value="item-5" className="w-full py-4 font-semibold">
+                <Link href={'/sign-in'}>
+                    Sign In
+                </Link>
+            </AccordionItem>
+            <AccordionItem value="item-6" className="w-full py-4 font-semibold">
+                <Link href={'/sign-up'}>
+                    Sign Up
+                </Link>
+            </AccordionItem>
+            <AccordionItem value="item-7" className="w-full py-4 font-semibold">
                 <DarkHomeSwitch />
             </AccordionItem>
         </Accordion>

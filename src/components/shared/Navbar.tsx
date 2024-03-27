@@ -20,8 +20,12 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="hidden md:flex items-center gap-x-2">
-                        <Button variant={'ghost'} className='' size={'sm'}>Sign up</Button>
-                        <Button className='text-white' size={'sm'}>Sign In</Button>
+                        <Link href={'/sign-up'}>
+                            <Button variant={'ghost'} className='' size={'sm'}>Sign up</Button>
+                        </Link>
+                        <Link href={'/sign-in'}>
+                            <Button className='text-white' size={'sm'}>Sign In</Button>
+                        </Link>
                     </div>
                     <div className="md:hidden">
                         <RootMobileNavbar />
