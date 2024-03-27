@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import HomeCarousel from './HomeCarousel'
 
 const Hero = () => {
   return (
@@ -14,10 +15,7 @@ const Hero = () => {
         </Link>
       </div>
       <div className="w-full max-sm:h-3/5 h-[calc(100%-208px)] flex justify-center">
-        <div className="w-full sm:w-4/5 h-full relative overflow-y-hidden">
-          <Image src={'/desktop-pic.png'} priority fill sizes='height: 100% , width: 100%' className="hidden object-contain object-top sm:block" alt='img' />
-          <Image src={'/mobile-mini.png'} priority fill sizes='height: 100% , width: 100%' className="block object-contain object-top sm:hidden" alt='img' />
-        </div>
+        <HomeCarousel />
       </div>
     </main>
   )
