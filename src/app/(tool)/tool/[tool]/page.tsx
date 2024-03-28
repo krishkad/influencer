@@ -1,4 +1,5 @@
 import { Dashboard } from '@/components/shared/Dashboard'
+import FindInfluencer from '@/components/shared/FindInfluencer'
 import { ToolNavbar } from '@/constants/index.c'
 import React from 'react'
 
@@ -13,6 +14,7 @@ const Page = ({ params }: { params: { tool: string } }) => {
             </div>
             <div className="w-full">
                 {content.Label === "Dashboard" && <Dashboard />}
+                {content.Label === "Find Influencer" && <FindInfluencer />}
             </div>
         </main>
     )
