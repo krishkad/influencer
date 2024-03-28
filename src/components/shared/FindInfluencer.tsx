@@ -10,6 +10,9 @@ import { FaTiktok, FaSnapchat } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
+import { madeForYouAlbums } from '@/constants/index.c';
+import Image from 'next/image';
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 const FindInfluencer = () => {
     return (
