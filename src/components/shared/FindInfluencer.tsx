@@ -10,9 +10,10 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { FaFacebook } from "react-icons/fa6";
-import { FaTiktok } from "react-icons/fa";
+import { FaTiktok, FaSnapchat  } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io";
+import { FaXTwitter } from "react-icons/fa6";
 
 const FindInfluencer = () => {
     return (
@@ -25,7 +26,7 @@ const FindInfluencer = () => {
                     </CardDescription>
                 </CardHeader> */}
                 <CardContent className="grid gap-6 border-none p-0">
-                    <RadioGroup defaultValue="card" className="grid grid-cols-3 gap-4">
+                    <RadioGroup defaultValue="instagram" className="grid grid-cols-3 gap-4">
                         <div>
                             <RadioGroupItem value="instagram" id="instagram" className="peer sr-only" />
                             <Label
@@ -67,8 +68,28 @@ const FindInfluencer = () => {
                                 htmlFor="tiktok"
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary font-semibold"
                             >
-                                <FaTiktok  className="mb-3 h-6 w-6" />
+                                <FaTiktok className="mb-3 h-6 w-6" />
                                 Tik Tok
+                            </Label>
+                        </div>
+                        <div>
+                            <RadioGroupItem value="xtwitter" id="xtwitter" className="peer sr-only" />
+                            <Label
+                                htmlFor="xtwitter"
+                                className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary font-semibold"
+                            >
+                                <FaXTwitter className="mb-3 h-6 w-6" />
+                                X
+                            </Label>
+                        </div>
+                        <div>
+                            <RadioGroupItem value="snapchat" id="snapchat" className="peer sr-only" />
+                            <Label
+                                htmlFor="snapchat"
+                                className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary font-semibold"
+                            >
+                                <FaSnapchat  className="mb-3 h-6 w-6" />
+                                Snapchat
                             </Label>
                         </div>
                     </RadioGroup>
