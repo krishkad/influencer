@@ -1,5 +1,4 @@
-import { SVGAttributes } from "react";
-import { Search } from "react-feather";
+
 
 export const NavLinks: { Label: string; href: string; description: string }[] = [
   {
@@ -37,7 +36,7 @@ export const NavLinks: { Label: string; href: string; description: string }[] = 
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
 
 export const ToolNavbar: { Label: string, href: string, description: string, miniDescription: string }[] = [
@@ -89,90 +88,123 @@ export const ToolNavbar: { Label: string, href: string, description: string, min
     description: "Experience the future of influencer marketing with our AI-powered approach tool for agencies.",
     miniDescription: "Experience the future of influencer marketing with our AI-powered approach tool for agencies."
   },
-]
-
-
-const CategoryForInfluencer: string[] = [
-  "Beauty and Makeup",
-  "Fashion",
-  "Fitness",
-  "Travel",
-  "Food",
-  "Parenting",
-  "Technology",
-  "Gaming",
-  "Lifestyle",
-  "Music and Entertainment",
-  "Health and Wellness",
-  "Business and Entrepreneurship",
-  "Finance",
-  "Education and Learning",
-  "Art and Design",
-  "Sports",
-  "Comedy",
-  "Mental Health and Self-Care",
-  "Science and Technology",
-  "Pets and Animals"
 ];
 
-export interface Album {
-  name: string
-  artist: string
-  cover: string
-}
+export const influencerCategories: { label: string, value: string }[] = [
+  { label: "Fashion", value: "fashion" },
+  { label: "Beauty", value: "beauty" },
+  { label: "Fitness", value: "fitness" },
+  { label: "Travel", value: "travel" },
+  { label: "Lifestyle", value: "lifestyle" },
+  { label: "Food", value: "food" },
+  { label: "Parenting", value: "parenting" },
+  { label: "Gaming", value: "gaming" },
+  { label: "Tech", value: "tech" },
+  { label: "Health & Wellness", value: "health_and_wellness" },
+  { label: "Home Decor", value: "home_decor" },
+  { label: "DIY & Crafts", value: "diy_and_crafts" },
+  { label: "Business & Entrepreneurship", value: "business_and_entrepreneurship" },
+  { label: "Finance", value: "finance" },
+  { label: "Education", value: "education" },
+  { label: "Pets", value: "pets" },
+  { label: "Books & Literature", value: "books_and_literature" },
+  { label: "Art & Design", value: "art_and_design" },
+  { label: "Photography", value: "photography" },
+  { label: "Music", value: "music" },
+  { label: "Comedy", value: "comedy" },
+  { label: "Social Issues & Activism", value: "social_issues_and_activism" },
+  { label: "Entertainment", value: "entertainment" }
+];
 
-export const madeForYouAlbums = [
-  {
-    name: "Thinking Components",
-    artist: "Lena Logic",
-    cover:
-      "https://images.unsplash.com/photo-1615247001958-f4bc92fa6a4a?w=300&dpr=2&q=80",
-  },
-  {
-    name: "Functional Fury",
-    artist: "Beth Binary",
-    cover:
-      "https://images.unsplash.com/photo-1513745405825-efaf9a49315f?w=300&dpr=2&q=80",
-  },
-  {
-    name: "React Rendezvous",
-    artist: "Ethan Byte",
-    cover:
-      "https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=300&dpr=2&q=80",
-  },
-  {
-    name: "Stateful Symphony",
-    artist: "Beth Binary",
-    cover:
-      "https://images.unsplash.com/photo-1446185250204-f94591f7d702?w=300&dpr=2&q=80",
-  },
-  {
-    name: "Async Awakenings",
-    artist: "Nina Netcode",
-    cover:
-      "https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80",
-  },
-  {
-    name: "The Art of Reusability",
-    artist: "Lena Logic",
-    cover:
-      "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
-  },
-]
+export const followerCounts: { label: string, value: string }[] = [
+  { label: "0 - 1k", value: "0 - 1000" },
+  { label: "1k - 10k", value: "1001 - 10000" },
+  { label: "10k - 50k", value: "10001 - 50000" },
+  { label: "50k - 100k", value: "50001 - 100000" },
+  { label: "100k - 500k", value: "100001 - 500000" },
+  { label: "500k - 1M", value: "500001 - 1000000" },
+  { label: "1M - 5M", value: "1000001 - 5000000" },
+  { label: "5M - 10M", value: "5000001 - 10000000" },
+  { label: "10M - 50M", value: "10000001 - 50000000" },
+  { label: "50M - 100M", value: "50000001 - 100000000" },
+  { label: "100M+", value: "100000001+" }
+];
 
-export type Playlist = (typeof playlists)[number]
 
-export const playlists = [
-  "Recently Added",
-  "Recently Played",
-  "Top Songs",
-  "Top Albums",
-  "Top Artists",
-  "Logic Discography",
-  "Bedtime Beats",
-  "Feeling Happy",
-  "I miss Y2K Pop",
-  "Runtober",
-  "Mellow Days",
-  "Eminem Essentials",
-]
+export const influencerLocations: { label: string, value: string }[] = [
+  { label: "North America", value: "North America" },
+  { label: "United States", value: "United States" },
+  { label: "Canada", value: "Canada" },
+  { label: "Mexico", value: "Mexico" },
+  { label: "South America", value: "South America" },
+  { label: "Brazil", value: "Brazil" },
+  { label: "Argentina", value: "Argentina" },
+  { label: "Colombia", value: "Colombia" },
+  { label: "Europe", value: "Europe" },
+  { label: "United Kingdom", value: "United Kingdom" },
+  { label: "Germany", value: "Germany" },
+  { label: "France", value: "France" },
+  { label: "Spain", value: "Spain" },
+  { label: "Italy", value: "Italy" },
+  { label: "Asia", value: "Asia" },
+  { label: "China", value: "China" },
+  { label: "India", value: "India" },
+  { label: "Japan", value: "Japan" },
+  { label: "South Korea", value: "South Korea" },
+  { label: "Australia", value: "Australia" },
+  { label: "Africa", value: "Africa" },
+  { label: "Nigeria", value: "Nigeria" },
+  { label: "South Africa", value: "South Africa" },
+  { label: "Kenya", value: "Kenya" },
+  { label: "Online/Global", value: "Online/Global" },
+  // You can add more specific locations as needed
+];
+
+export const genders: { label: string, value: string }[] = [
+  { label: "All", value: "all" },
+  { label: "Male", value: "Male" },
+  { label: "Female", value: "Female" },
+  { label: "Non-Binary", value: "Non-Binary" },
+  { label: "Transgender", value: "Transgender" },
+  { label: "Cisgender", value: "Cisgender" }
+];
+
+export const engagementRates: { label: string, value: string }[] = [
+  { label: "0 - 1%", value: "0.01" },
+  { label: "1 - 2%", value: "0.02" },
+  { label: "2 - 3%", value: "0.03" },
+  { label: "3 - 4%", value: "0.04" },
+  { label: "4 - 5%", value: "0.05" },
+  { label: "5 - 6%", value: "0.06" },
+  { label: "6 - 7%", value: "0.07" },
+  { label: "7 - 8%", value: "0.08" },
+  { label: "8 - 9%", value: "0.09" },
+  { label: "9 - 10%", value: "0.10" },
+  { label: "10%+", value: "0.10+" } // assuming 10% or more
+];
+
+export const audienceIncomeLevels: { label: string, value: string }[] = [
+  { label: "All", value: "all" },
+  { label: "Low-income", value: "Low-income" },
+  { label: "Middle-income", value: "Middle-income" },
+  { label: "High-income", value: "High-income" }
+];
+
+export const audienceAgeGroups: { label: string, value: string }[] = [
+  { label: "18-24 years", value: "18-24" },
+  { label: "25-34 years", value: "25-34" },
+  { label: "35-44 years", value: "35-44" },
+  { label: "45-54 years", value: "45-54" },
+  { label: "55-64 years", value: "55-64" },
+  { label: "65+ years", value: "65+" }
+];
+
+export const audienceOccupations: { label: string, value: string }[] = [
+  { label: "All", value: "all" },
+  { label: "Student", value: "Student" },
+  { label: "Professional", value: "Professional" },
+  { label: "Entrepreneur", value: "Entrepreneur" },
+  { label: "Homemaker", value: "Homemaker" },
+  { label: "Retired", value: "Retired" }
+];
+

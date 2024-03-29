@@ -10,9 +10,9 @@ import { FaTiktok, FaSnapchat } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
-import { madeForYouAlbums } from '@/constants/index.c';
-import Image from 'next/image';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+import { audienceAgeGroups, audienceIncomeLevels, audienceOccupations, engagementRates, followerCounts, genders, influencerCategories, influencerLocations } from '@/constants/index.c';
+import Sele from './Sele';
+import { Button } from '../ui/button';
 
 const FindInfluencer = () => {
     return (
@@ -97,17 +97,34 @@ const FindInfluencer = () => {
                     </CardContent>
                 </Card>
             </div >
-            <div className="w-full">
+            <div className="w-full flex flex-col gap-7">
                 <div className="mt-6 space-y-1">
                     <h2 className="text-xl font-semibold tracking-tight">
-                        Made for You
+                        Tell us more
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                        Your personal playlists. Updated daily.
+                        What kind of influencer you want.
                     </p>
+                </div>
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <Sele data={influencerCategories} title='Category' />
+                    <Sele data={followerCounts} title='Followers' />
+                    <Sele data={influencerLocations} title='Location' />
+                    <Sele data={genders} title='Gender' />
+                    <Sele data={engagementRates} title='Average Engagement' />
+                    <Sele data={audienceIncomeLevels} title='Audience Income Level' />
+                    <Sele data={audienceAgeGroups} title='Audience Age Group' />
+                    <Sele data={audienceOccupations} title='Audience Occupations' />
+                </div>
+                <div className="w-full">
+                    <Button className='w-full h-14 font-semibold'>
+                        {true ? "Find Influencer" : "Finding..."}
+                    </Button>
                 </div>
             </div>
         </div>
+
+
     )
 }
 

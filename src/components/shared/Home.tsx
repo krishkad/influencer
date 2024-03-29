@@ -27,19 +27,23 @@ const Hero = () => {
           <Image
             src={`/desktop-pics.png`}
             alt="hero"
+            priority
             height={720}
             width={1400}
             className="hidden md:block mx-auto rounded-2xl object-cover h-full object-left-top"
             draggable={false}
           />
+         
           <Image
             src={`/mobile.png`}
             alt="hero"
+            priority
             height={720}
             width={1400}
-            className="block md:block mx-auto rounded-2xl object-cover h-full object-left-top"
+            className="block md:hidden mx-auto rounded-2xl object-cover h-full object-left-top"
             draggable={false}
           />
+         
         </ContainerScroll>
       </div>
     </main>
