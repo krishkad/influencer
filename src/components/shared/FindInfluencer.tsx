@@ -106,7 +106,7 @@ const FindInfluencer = () => {
                         What kind of influencer you want.
                     </p>
                 </div>
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
                     <Sele data={influencerCategories} title='Category' />
                     <Sele data={followerCounts} title='Followers' />
                     <Sele data={influencerLocations} title='Location' />
@@ -117,7 +117,7 @@ const FindInfluencer = () => {
                     <Sele data={audienceOccupations} title='Audience Occupations' />
                 </div>
                 <div className="w-full">
-                    <Button className='w-full h-14 font-semibold'>
+                    <Button className='w-full h-14 font-semibold text-white'>
                         {true ? "Find Influencer" : "Finding..."}
                     </Button>
                 </div>

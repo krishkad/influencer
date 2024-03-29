@@ -51,7 +51,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
 
     if (!mounted) return null
     return (
-        <div className="grid min-h-screen w-full md:grid-cols-[250px_1fr] lg:grid-cols-[280px_1fr]">
+        <div className="grid min-h-screen w-full md:grid-cols-[250px_1fr] lg:grid-cols-[280px_1fr] bg-background">
             <div className="hidden border-r md:block">
                 <div className="flex h-full max-h-screen flex-col gap-2">
                     <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
@@ -86,7 +86,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                 </div>
             </div>
             <div className="flex flex-col">
-                <header className="flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6">
+                <header className="flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6 bg-background">
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button
@@ -98,7 +98,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                 <span className="sr-only">Toggle navigation menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="left" className="flex flex-col">
+                        <SheetContent side="left" className="flex flex-col bg-background">
                             <SheetHeader className="flex flex-col">
                                 <SheetTitle className="text-primary">
                                     <Link href={'/'}>
