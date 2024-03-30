@@ -4,6 +4,7 @@ import { audienceAgeGroups, audienceIncomeLevels, audienceOccupations, engagemen
 import { Button } from '../ui/button';
 import Platform from './Platform';
 import CheckSelect from './CheckSelet';
+import RadioSelect from './RadioSelect';
 
 const FindInfluencerContainer = () => {
     const [filters, setFilters] = useState<filterTypes>({ platform: "", category: "", followerCounts: "", location: "", gender: "", engagementRate: "", incomeLevel: "", ageGroup: "", occupation: "" });
@@ -29,10 +30,10 @@ const FindInfluencerContainer = () => {
                 </div>
                 <div className="w-full flex flex-col gap-10">
                     <CheckSelect multiSelect={false} data={influencerCategories} title='Category' />
-                    <CheckSelect multiSelect={false} data={followerCounts} title='Followers' />
+                    <RadioSelect data={followerCounts} title='Followers' />
                     <CheckSelect multiSelect={false} data={influencerLocations} title='Location' />
                     <CheckSelect multiSelect={true} data={genders} title='Gender' />
-                    <CheckSelect multiSelect={false} data={engagementRates} title='Average Engagement' />
+                    <RadioSelect data={engagementRates} title='Average Engagement' />
                     <CheckSelect multiSelect={false} data={audienceIncomeLevels} title='Audience Income Level' />
                     <CheckSelect multiSelect={false} data={audienceAgeGroups} title='Audience Age Group' />
                     <CheckSelect multiSelect={true} data={audienceOccupations} title='Audience Occupations' />
