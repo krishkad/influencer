@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { RiInstagramFill } from 'react-icons/ri';
+import { cn } from '@/lib/utils';
 
-const RadioSelect = ({ data, title }: { data: { label: string, value: string }[], title: string }) => {
+const RadioSelect = ({ data, title, grid }: { data: { label: string, value: string }[], title: string, grid?: number }) => {
 
     const [input, setInput] = useState("");
     return (
@@ -13,7 +14,7 @@ const RadioSelect = ({ data, title }: { data: { label: string, value: string }[]
                 <span className='font-semibold'>Select {title}</span>
                 <span className="text-muted-foreground text-sm font-medium">Lorem ipsum dolor sit.</span>
             </div>
-            <RadioGroup defaultValue="instagram" name='platform' className="grid grid-cols-3 lg:grid-cols-4 gap-4">
+            <RadioGroup defaultValue="instagram" name='platform' className={cn("grid  sm:grid-cols-3 lg:grid-cols-4 gap-4", `grid-cols-${grid || 2}`)}>
                 {data.map((item) => {
                     let checked = item.value === input;
                     return <div key={item.value}>

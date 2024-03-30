@@ -33,9 +33,9 @@ const FindInfluencerContainer = () => {
                     <RadioSelect data={followerCounts} title='Followers' />
                     <CheckSelect multiSelect={false} data={influencerLocations} title='Location' />
                     <CheckSelect multiSelect={true} data={genders} title='Gender' />
-                    <RadioSelect data={engagementRates} title='Average Engagement' />
+                    <RadioSelect grid={3} data={engagementRates} title='Average Engagement' />
                     <CheckSelect multiSelect={false} data={audienceIncomeLevels} title='Audience Income Level' />
-                    <CheckSelect multiSelect={false} data={audienceAgeGroups} title='Audience Age Group' />
+                    <RadioSelect data={audienceAgeGroups} title='Audience Age Group' />
                     <CheckSelect multiSelect={true} data={audienceOccupations} title='Audience Occupations' />
                 </div>
                 <div className="w-full">
