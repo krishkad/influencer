@@ -11,6 +11,12 @@ import { FaTiktok, FaSnapchat } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
+import Facebook from './Icons/Facebook';
+import Instagram from './Icons/Instagram';
+import Youtube from './Icons/Youtube';
+import Tiktok from './Icons/Tiktok';
+import XTwitter from './Icons/XTwitter';
+import Snapchat from './Icons/Snapchat';
 
 const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) => {
 
@@ -27,7 +33,8 @@ const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) =>
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent font-semibold"
                             >
 
-                                <RiInstagramFill className="mb-3 h-6 w-6" />
+                                <Instagram CName="mb-3 h-8 w-8" />
+                                {/* <RiInstagramFill className="mb-3 h-6 w-6 text-gradient-to-tr from-rose-500 to-indigo-600" /> */}
                                 Instagram
                             </Label>
                         </div>
@@ -41,7 +48,8 @@ const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) =>
                                 htmlFor="facebook"
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent  font-semibold"
                             >
-                                <FaFacebook className="mb-3 h-6 w-6" />
+                                {/* <FaFacebook className="mb-3 h-6 w-6 text-primary " /> */}
+                                <Facebook CName="mb-3 h-8 w-8" />
                                 Facebook
                             </Label>
                         </div>
@@ -51,7 +59,7 @@ const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) =>
                                 htmlFor="youtube"
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent font-semibold"
                             >
-                                <IoLogoYoutube className="mb-3 h-6 w-6" />
+                                <Youtube CName="mb-3 h-8 w-8 " />
                                 Youtube
                             </Label>
                         </div>
@@ -61,7 +69,7 @@ const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) =>
                                 htmlFor="tiktok"
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent font-semibold"
                             >
-                                <FaTiktok className="mb-3 h-6 w-6" />
+                                <Tiktok CName="mb-3 h-8 w-8 " />
                                 Tik Tok
                             </Label>
                         </div>
@@ -71,7 +79,7 @@ const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) =>
                                 htmlFor="xtwitter"
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent font-semibold"
                             >
-                                <FaXTwitter className="mb-3 h-6 w-6" />
+                                <XTwitter CName="mb-3 h-8 w-8 " />
                                 X
                             </Label>
                         </div>
@@ -81,7 +89,7 @@ const Platform = ({ handleFilters }: { handleFilters: (value: any) => void }) =>
                                 htmlFor="snapchat"
                                 className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent font-semibold"
                             >
-                                <FaSnapchat className="mb-3 h-6 w-6" />
+                                <Snapchat CName="mb-3 h-8 w-8 " />
                                 Snapchat
                             </Label>
                         </div>
