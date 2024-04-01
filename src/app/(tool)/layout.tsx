@@ -82,7 +82,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
             <div className="flex flex-col">
                 <header className="flex h-14 items-center gap-4 border-b-muted px-4 lg:h-[60px] lg:px-6 bg-background sticky top-0 z-50">
-                    <Sheet>
+                    <Sheet >
                         <SheetTrigger asChild>
                             <Button
                                 variant="outline"
@@ -93,7 +93,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                 <span className="sr-only">Toggle navigation menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="left" className="flex flex-col bg-background">
+                        <SheetContent side="left" className="flex flex-col bg-background border border-muted">
                             <SheetHeader className="flex flex-col items-start">
                                 <SheetTitle className="text-primary">
                                     <Link href={'/'}>
@@ -159,7 +159,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                 <span className="sr-only">Toggle user menu</span>
                             </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
+                        <DropdownMenuContent align="end" className='border border-muted'>
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>Settings</DropdownMenuItem>
