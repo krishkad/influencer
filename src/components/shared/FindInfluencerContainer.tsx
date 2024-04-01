@@ -1,10 +1,11 @@
 "use client"
 import React, { useState } from 'react'
-import { audienceAgeGroups, audienceIncomeLevels, audienceOccupations, engagementRates, followerCounts, genders, influencerCategories, influencerLocations } from '@/constants/index.c';
+import { audienceAgeGroups, audienceIncomeLevels, audienceOccupations, dummyProfile, engagementRates, followerCounts, genders, influencerCategories, influencerLocations } from '@/constants/index.c';
 import { Button } from '../ui/button';
 import Platform from './Platform';
 import CheckSelect from './CheckSelet';
 import RadioSelect from './RadioSelect';
+import ProfileCard from './ProfileCard';
 
 const FindInfluencerContainer = () => {
     const [filters, setFilters] = useState<filterTypes>({ platform: "", category: "", followerCounts: "", location: "", gender: "", engagementRate: "", incomeLevel: "", ageGroup: "", occupation: "" });
@@ -47,7 +48,13 @@ const FindInfluencerContainer = () => {
                     </div>
                 </div>
             </div>
-            
+            <div className="w-full">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 mt-20">
+                    {dummyProfile.map((item, i) => {
+                        return <ProfileCard imgUrl={item.imgUrl} username={item.username} followers={item.followers} following={item.following} creatorTitle={item.creatorTitle} posts={item.posts} name={item.name} bio={item.bio} key={i} />
+                    })}
+                </div>
+            </div>
         </div>
     )
 }

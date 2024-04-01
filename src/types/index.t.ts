@@ -9,3 +9,15 @@ declare type filterTypes = {
     ageGroup: string;
     occupation: string;
 }
+
+declare type instaProfileType = {
+    imgUrl: string;
+    username: string;
+    name: string;
+    posts: string;
+    followers: string;
+    following: string;
+    creatorTitle?: string;
+    bio?: any
+
+}

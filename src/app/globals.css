@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    --gradient: linear-gradient(to top left,#091E3A,#2F80ED,#2D9EE0);
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -54,7 +55,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply box-border;
   }
 
   body {
@@ -74,4 +75,6 @@
   .tools-wrapper {
     @apply px-3 py-4
   }
+
+  .bg-gradient { background: var(--gradient) } 
 }

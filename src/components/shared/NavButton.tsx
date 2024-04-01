@@ -15,9 +15,7 @@ const NavButton = ({ href, Label }: { href: string, Label: string }) => {
                     {
                         Label === "Dashboard" && <Grid className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
                         Label === "Find Influencer" && <Search className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                        Label === "Campaign Management" && <Folder className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                        Label === "Contract Management" && <Paperclip className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                        Label === "Content Collaboration" && <Share2 className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
+                        Label === "Contract Generation" && <Paperclip className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
                         Label === "Trend Identification" && <Activity className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
                         Label === "Report Generation" && <File className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} /> ||
                         Label === "AI Approaching" && <Cpu className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', href === pathname && 'text-primary hover:text-primary  ')} />

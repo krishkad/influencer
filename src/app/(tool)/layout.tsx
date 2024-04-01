@@ -4,14 +4,9 @@ import Link from "next/link"
 import {
     Bell,
     CircleUser,
-    Home,
-    LineChart,
     Menu,
-    Package,
     Package2,
     Search,
-    ShoppingCart,
-    Users,
 } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -52,9 +47,9 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
     if (!mounted) return null
     return (
         <div className="grid min-h-screen w-full md:grid-cols-[250px_1fr] lg:grid-cols-[280px_1fr] bg-background">
-            <div className="hidden border-r md:block">
+            <div className="hidden border-r-muted md:block h-screen sticky left-0 top-0 z-50">
                 <div className="flex h-full max-h-screen flex-col gap-2">
-                    <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
+                    <div className="flex h-14 items-center border-b-muted px-4 lg:h-[60px] lg:px-6">
                         <Link href="/" className="flex items-center gap-2 font-semibold">
                             <Package2 className="h-6 w-6" />
                             <span className="text-primary">Influencer</span>
@@ -68,7 +63,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                         <SidebarLink />
                     </div>
                     <div className="mt-auto p-4">
-                        <Card>
+                        <Card className='border-muted'>
                             <CardHeader className="p-2 pt-0 md:p-4">
                                 <CardTitle className="text-base">Upgrade to Pro</CardTitle>
                                 <CardDescription className="text-xs">
@@ -86,7 +81,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                 </div>
             </div>
             <div className="flex flex-col">
-                <header className="flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6 bg-background">
+                <header className="flex h-14 items-center gap-4 border-b-muted px-4 lg:h-[60px] lg:px-6 bg-background sticky top-0 z-50">
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button
@@ -99,7 +94,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="left" className="flex flex-col bg-background">
-                            <SheetHeader className="flex flex-col">
+                            <SheetHeader className="flex flex-col items-start">
                                 <SheetTitle className="text-primary">
                                     <Link href={'/'}>
                                         Influencer
@@ -115,9 +110,7 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                                 {
                                                     item.Label === "Dashboard" && <Grid className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
                                                     item.Label === "Find Influencer" && <Search className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                                                    item.Label === "Campaign Management" && <Folder className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                                                    item.Label === "Contract Management" && <Paperclip className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
-                                                    item.Label === "Content Collaboration" && <Share2 className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
+                                                    item.Label === "Contract Generation" && <Paperclip className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
                                                     item.Label === "Trend Identification" && <Activity className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
                                                     item.Label === "Report Generation" && <File className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} /> ||
                                                     item.Label === "AI Approaching" && <Cpu className={cn('w-4 h-4 text-muted-foreground group-hover:text-primary', item.href === pathname && 'text-primary hover:text-primary  ')} />
