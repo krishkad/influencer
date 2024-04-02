@@ -18,6 +18,7 @@ declare type instaProfileType = {
     followers: string;
     following: string;
     creatorTitle?: string;
-    bio?: any
+    averageEngagement: string;
+    bio?: string[];
 
 }

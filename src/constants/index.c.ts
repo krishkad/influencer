@@ -203,17 +203,33 @@ export const dummyProfile: instaProfileType[] = [
     posts: "23",
     followers: "123",
     following: "321",
-    creatorTitle: "public figure"
+    creatorTitle: "public figure",
+    averageEngagement: "3%",
+    bio: [
+      "😍 Living my best life. 🌟",
+      "🎉 Living it up, one day at a time. 🥂",
+      "🏆 Won’t stop till I drop. 💯",
+      "🚀 Can’t stop, won’t stop. 🔥"
+    ]
+    
 
   },
   {
     imgUrl: "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "eve_conor",
-    name: "eve",
+    name: "Eve Cornor",
     posts: "23",
     followers: "123",
     following: "321",
-    creatorTitle: "public figure"
+    creatorTitle: "public figure",
+    averageEngagement: "3%",
+   bio: [
+    "🙌 Can’t stop being awesome. 😎",
+    "😍 Awesome by birth. 😘",
+    "💫 Dream chaser with a heart of gold. 💛",
+    "🌠 Turning dreams into reality, one post at a time. 📸"
+   ]
+    
 
   },
   {
@@ -223,7 +239,15 @@ export const dummyProfile: instaProfileType[] = [
     posts: "23",
     followers: "123",
     following: "321",
-    creatorTitle: "public figure"
+    creatorTitle: "public figure",
+    averageEngagement: "3%",
+    bio: [
+      "🌎 Adventurer in the digital realm. 🌐",
+      "💕 In a committed relationship with success. 💯",
+      "🌼 Simplicity with a dash of complexity. 🌶",
+      "🎯 Chasing goals, not trends. 🙅"
+    ]
+    
 
   },
   {
@@ -233,7 +257,14 @@ export const dummyProfile: instaProfileType[] = [
     posts: "23",
     followers: "123",
     following: "321",
-    creatorTitle: "public figure"
+    creatorTitle: "public figure",
+    averageEngagement: "3%",
+    bio: [
+      "🏋 Gym enthusiast. 💦",
+      "🚗 Petrolhead. 🚘",
+      "🚙 Automobile enthusiast. 🚖",
+      "😊 Stay positive, dream big. 🌠"
+    ]
 
   },
 ];

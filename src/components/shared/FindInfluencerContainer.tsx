@@ -49,9 +49,9 @@ const FindInfluencerContainer = () => {
                 </div>
             </div>
             <div className="w-full">
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 mt-20">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-20">
                     {dummyProfile.map((item, i) => {
-                        return <ProfileCard imgUrl={item.imgUrl} username={item.username} followers={item.followers} following={item.following} creatorTitle={item.creatorTitle} posts={item.posts} name={item.name} bio={item.bio} key={i} />
+                        return <ProfileCard imgUrl={item.imgUrl} username={item.username} followers={item.followers} following={item.following} creatorTitle={item.creatorTitle} posts={item.posts} name={item.name} bio={item.bio} averageEngagement={item.averageEngagement} key={i} />
                     })}
                 </div>
             </div>

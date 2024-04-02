@@ -15,23 +15,27 @@ import {
 } from "@/components/ui/tabs"
 import { cn } from '@/lib/utils'
 import { Bookmark } from 'react-feather'
+import { MdVerified } from "react-icons/md";
 
-const ProfileCard = ({ imgUrl, username, name, posts, followers, following, creatorTitle, bio }: instaProfileType) => {
+const ProfileCard = ({ imgUrl, username, name, posts, followers, following, creatorTitle, bio, averageEngagement }: instaProfileType) => {
     const [save, setSave] = useState(false);
 
     return (
         <div className='w-full h-[35rem] border border-muted rounded-xl shadow overflow-hidden'>
-            <div className={cn("w-full h-[30%] p-4 relative", 'bg-gradient')}>
+            <div className={cn("w-full h-[20%] p-4 relative", 'bg-gradient')}>
                 <Image src={imgUrl} width={80} height={80} className='object-cover aspect-square rounded-full p-1 bg-background absolute -bottom-[40px]' alt={username} />
 
                 <div className="flex items-center gap-2 absolute top-4 right-4">
-                    <Bookmark className={cn('w-4 h-4 text-white cursor-pointer', save && 'fill-white')} onClick={()=> setSave(!save)} />
+                    <Bookmark className={cn('w-5 h-5 text-white cursor-pointer', save && 'fill-white')} onClick={() => setSave(!save)} />
                 </div>
 
             </div>
-            <div className="w-full h-[70%] p-4 pt-10">
-                <div className="w-full mb-2">
-                    <span className="font-semibold">{username}</span>
+            <div className="w-full h-[80%] p-4 pt-10">
+                <div className="w-full mb-2 flex items-center gap-2">
+                    <span className="font-semibold">
+                        {username}
+                    </span>
+                    <MdVerified className='w-4 h-4 text-primary' />
                 </div>
                 <Tabs defaultValue="profile" className="w-full p-0">
                     <TabsList className="grid w-full grid-cols-2">
@@ -56,8 +60,13 @@ const ProfileCard = ({ imgUrl, username, name, posts, followers, following, crea
                                     </div>
                                 </div>
                                 <div className="w-full flex flex-col">
-                                    <span className="font-medium">{name}</span>
+                                    <span className="font-semibold">{name}</span>
                                     <span className="font-semibold text-xs text-zinc-400">{creatorTitle}</span>
+                                    <div className="w-full flex flex-col mt-4">
+                                        {bio?.map((item, i) => {
+                                            return <span className="font-medium text-sm" key={i}>{item}</span>
+                                        })}
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
