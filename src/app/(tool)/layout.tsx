@@ -159,16 +159,15 @@ const AccessLayout = ({ children }: { children: React.ReactNode }) => {
                                 <span className="sr-only">Toggle user menu</span>
                             </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className='border border-muted'>
+                        <DropdownMenuContent align="end" className='border border-muted w-full'>
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>Settings</DropdownMenuItem>
-                            <DropdownMenuItem>Support</DropdownMenuItem>
-                            <DropdownMenuItem>
-                                {theme === "light" ? <span onClick={()=> setTheme('dark')}>Dark Mode</span> : <span onClick={()=> setTheme("light")}>Light Mode</span>}
-                            </DropdownMenuItem>
+                            <DropdownMenuItem className='w-full' >Settings</DropdownMenuItem>
+                            <DropdownMenuItem className='w-full' >Support</DropdownMenuItem>
+                            <DropdownMenuItem className={cn('w-full', theme === "light" && "hidden")} onClick={() => setTheme('light')}>Light Mode</DropdownMenuItem>
+                            <DropdownMenuItem className={cn('w-full', theme === "dark" && "hidden")} onClick={() => setTheme('dark')}>Dark Mode</DropdownMenuItem>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>Logout</DropdownMenuItem>
+                            <DropdownMenuItem className='w-full'>Logout</DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </header>

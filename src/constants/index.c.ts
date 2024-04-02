@@ -38,7 +38,6 @@ export const NavLinks: { Label: string; href: string; description: string }[] = 
   },
 ];
 
-
 export const ToolNavbar: { Label: string, href: string, description: string, miniDescription: string }[] = [
   {
     Label: "Dashboard",
@@ -209,8 +208,8 @@ export const dummyProfile: instaProfileType[] = [
   },
   {
     imgUrl: "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    username: "krrrish_",
-    name: "krrish kadam",
+    username: "eve_conor",
+    name: "eve",
     posts: "23",
     followers: "123",
     following: "321",
@@ -219,8 +218,8 @@ export const dummyProfile: instaProfileType[] = [
   },
   {
     imgUrl: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    username: "krrrish_",
-    name: "krrish kadam",
+    username: "stevehimer",
+    name: "Steve Himer",
     posts: "23",
     followers: "123",
     following: "321",
@@ -229,12 +228,12 @@ export const dummyProfile: instaProfileType[] = [
   },
   {
     imgUrl: "https://images.unsplash.com/photo-1520626337972-ebf863448db6?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    username: "krrrish_",
-    name: "krrish kadam",
+    username: "tom_mcleran",
+    name: "Tom McLaren",
     posts: "23",
     followers: "123",
     following: "321",
     creatorTitle: "public figure"
 
   },
-]
+];
