@@ -210,7 +210,8 @@ export const dummyProfile: instaProfileType[] = [
       "🎉 Living it up, one day at a time. 🥂",
       "🏆 Won’t stop till I drop. 💯",
       "🚀 Can’t stop, won’t stop. 🔥"
-    ]
+    ],
+    averageViews: "123k"
     
 
   },
@@ -228,7 +229,8 @@ export const dummyProfile: instaProfileType[] = [
     "😍 Awesome by birth. 😘",
     "💫 Dream chaser with a heart of gold. 💛",
     "🌠 Turning dreams into reality, one post at a time. 📸"
-   ]
+   ],
+   averageViews: "123k"
     
 
   },
@@ -246,7 +248,8 @@ export const dummyProfile: instaProfileType[] = [
       "💕 In a committed relationship with success. 💯",
       "🌼 Simplicity with a dash of complexity. 🌶",
       "🎯 Chasing goals, not trends. 🙅"
-    ]
+    ],
+    averageViews: "123k"
     
 
   },
@@ -264,7 +267,8 @@ export const dummyProfile: instaProfileType[] = [
       "🚗 Petrolhead. 🚘",
       "🚙 Automobile enthusiast. 🚖",
       "😊 Stay positive, dream big. 🌠"
-    ]
+    ],
+    averageViews: "123k"
 
   },
 ];

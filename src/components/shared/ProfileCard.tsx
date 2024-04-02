@@ -14,10 +14,10 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import { cn } from '@/lib/utils'
-import { Bookmark } from 'react-feather'
+import { Bookmark, Eye } from 'react-feather'
 import { MdVerified } from "react-icons/md";
 
-const ProfileCard = ({ imgUrl, username, name, posts, followers, following, creatorTitle, bio, averageEngagement }: instaProfileType) => {
+const ProfileCard = ({ imgUrl, username, name, posts, followers, following, creatorTitle, bio, averageEngagement, averageViews }: instaProfileType) => {
     const [save, setSave] = useState(false);
 
     return (
@@ -42,30 +42,51 @@ const ProfileCard = ({ imgUrl, username, name, posts, followers, following, crea
                         <TabsTrigger value="profile" className=''>Profile</TabsTrigger>
                         <TabsTrigger value="insight" className=''>Insight</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="profile" className='w-full p-0 '>
+                    <TabsContent value="profile" className='w-full p-0'>
                         <Card className='w-full p-0 border-none'>
                             <CardContent className="space-y-2 p-0">
-                                <div className="flex justify-center items-center gap-4">
-                                    <div className="w-20 aspect-square flex flex-col justify-center items-center p-2">
-                                        <span className="font-bold text-sm">{posts}</span>
-                                        <span className="font-bold text-sm">Posts</span>
-                                    </div>
-                                    <div className="w-20 aspect-square flex flex-col justify-center items-center p-2">
-                                        <span className="font-bold text-sm">{followers}</span>
-                                        <span className="font-bold text-sm">followers</span>
-                                    </div>
-                                    <div className="w-20 aspect-square flex flex-col justify-center items-center p-2">
-                                        <span className="font-bold text-sm">{following}</span>
-                                        <span className="font-bold text-sm">following</span>
-                                    </div>
-                                </div>
-                                <div className="w-full flex flex-col">
-                                    <span className="font-semibold">{name}</span>
-                                    <span className="font-semibold text-xs text-zinc-400">{creatorTitle}</span>
-                                    <div className="w-full flex flex-col mt-4">
-                                        {bio?.map((item, i) => {
-                                            return <span className="font-medium text-sm" key={i}>{item}</span>
-                                        })}
+                                <div className="w-full flex flex-col items-between">
+                                    <div className="w-full">
+                                        <div className="flex justify-center items-center gap-4">
+                                            <div className="w-20 aspect-square flex flex-col justify-center items-center p-2">
+                                                <span className="font-bold text-sm">{posts}</span>
+                                                <span className="font-bold text-sm">Posts</span>
+                                            </div>
+                                            <div className="w-20 aspect-square flex flex-col justify-center items-center p-2">
+                                                <span className="font-bold text-sm">{followers}</span>
+                                                <span className="font-bold text-sm">followers</span>
+                                            </div>
+                                            <div className="w-20 aspect-square flex flex-col justify-center items-center p-2">
+                                                <span className="font-bold text-sm">{following}</span>
+                                                <span className="font-bold text-sm">following</span>
+                                            </div>
+                                        </div>
+                                        <div className="w-full flex flex-col">
+                                            <span className="font-semibold">{name}</span>
+                                            <span className="font-semibold text-xs text-zinc-400">{creatorTitle}</span>
+                                            <div className="w-full flex flex-col mt-4">
+                                                {bio?.map((item, i) => {
+                                                    return <span className="font-medium text-sm" key={i}>{item}</span>
+                                                })}
+                                            </div>
+                                        </div>
+                                        <div className="w-full flex flex-col gap-2 mt-4">
+                                            <span className="font-semibold text-sm text-muted-foreground">
+                                                Average Engagement - <span className="text-foreground">
+                                                    {averageEngagement}
+                                                </span>
+                                            </span>
+                                            <span className="font-semibold text-sm text-muted-foreground">
+                                                Average Views - <span className="text-foreground">
+                                                    {averageViews}
+                                                </span>
+                                            </span>
+                                            <span className="font-semibold text-sm text-muted-foreground">
+                                                Hightest Views - <span className="text-foreground">
+                                                    {averageViews}
+                                                </span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </CardContent>

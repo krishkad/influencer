@@ -21,7 +21,7 @@ const RadioSelect = ({ data, title, grid }: { data: { label: string, value: stri
                         <RadioGroupItem value={item.value} onClick={() => setInput(item.value)} id={item.value} checked={checked} className="peer sr-only" />
                         <Label
                             htmlFor={item.value}
-                            className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-accent font-semibold"
+                            className="flex flex-col items-center justify-between rounded-md transition-all duration-200 border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary peer-data-[state=checked]:bg-primary font-semibold peer-data-[state=checked]:text-white"
                         >
                             {item.label}
                         </Label>
