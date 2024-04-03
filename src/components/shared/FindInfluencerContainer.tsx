@@ -21,7 +21,7 @@ const FindInfluencerContainer = () => {
         <div className='w-full'>
             <div className="w-full">
                 <Platform handleFilters={handleFilters} />
-                <div className="w-full flex flex-col gap-7 mt-5">
+                <div className="w-full flex flex-col gap-7 mt-7">
                     <div className="w-full flex flex-col gap-10">
                         <CheckSelect multiSelect={false} data={influencerCategories} title='Category' description='Select Category of Influencer.' />
                         <RadioSelect data={followerCounts} title='Followers' description='Select minimux to maximun number of followers.' />

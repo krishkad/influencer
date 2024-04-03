@@ -148,7 +148,7 @@ export const influencerLocations: { label: string, value: string }[] = [
 ];
 
 export const genders: { label: string, value: string }[] = [
-  { label: "All", value: "all" },
+  { label: "All", value: "any-gender" },
   { label: "Male", value: "Male" },
   { label: "Female", value: "Female" },
   { label: "Non-Binary", value: "Non-Binary" },
@@ -183,7 +183,7 @@ export const AverageReach: { label: string, value: string }[] = [
 ];
 
 export const audienceIncomeLevels: { label: string, value: string }[] = [
-  { label: "All", value: "all" },
+  { label: "All", value: "any-income-level" },
   { label: "Low-income", value: "Low-income" },
   { label: "Middle-income", value: "Middle-income" },
   { label: "High-income", value: "High-income" }
@@ -199,7 +199,7 @@ export const audienceAgeGroups: { label: string, value: string }[] = [
 ];
 
 export const audienceOccupations: { label: string, value: string }[] = [
-  { label: "All", value: "all" },
+  { label: "All", value: "any-occupation" },
   { label: "Student", value: "Student" },
   { label: "Professional", value: "Professional" },
   { label: "Entrepreneur", value: "Entrepreneur" },
