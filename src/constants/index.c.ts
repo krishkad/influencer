@@ -169,6 +169,18 @@ export const engagementRates: { label: string, value: string }[] = [
   { label: "9 - 10%", value: "0.10" },
   { label: "10%+", value: "0.10+" } // assuming 10% or more
 ];
+export const AverageReach: { label: string, value: string }[] = [
+  { label: "10k - 15k", value: "10000 - 15000" },
+  { label: "15k - 25k", value: "15000 - 25000" },
+  { label: "25k - 35k", value: "25000 - 35000" },
+  { label: "35k - 50k", value: "35000 - 50000" },
+  { label: "50k - 100k", value: "50000 - 100000" },
+  { label: "100k - 500k", value: "100000 - 500000" },
+  { label: "500k - 1M", value: "500000 - 1000000" },
+  { label: "1M - 10M", value: "1000000 - 10000000" },
+  { label: "10M - 10M+", value: "10000000+" },
+ 
+];
 
 export const audienceIncomeLevels: { label: string, value: string }[] = [
   { label: "All", value: "all" },

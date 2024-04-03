@@ -5,14 +5,14 @@ import { Label } from "@/components/ui/label"
 import { RiInstagramFill } from 'react-icons/ri';
 import { cn } from '@/lib/utils';
 
-const RadioSelect = ({ data, title, grid }: { data: { label: string, value: string }[], title: string, grid?: number }) => {
+const RadioSelect = ({ data, title, grid, description }: { data: { label: string, value: string }[], title: string, grid?: number, description: string }) => {
 
     const [input, setInput] = useState("");
     return (
         <div className="w-full flex flex-col gap-4">
-            <div className="w-full flex flex-col gap-1">
+            <div className="w-full flex flex-col">
                 <span className='font-semibold'>Select {title}</span>
-                <span className="text-muted-foreground text-sm font-medium">Lorem ipsum dolor sit.</span>
+                <span className="text-muted-foreground text-sm font-medium">{description}</span>
             </div>
             <RadioGroup defaultValue="instagram" name='platform' className={cn("grid  sm:grid-cols-3 lg:grid-cols-4 gap-4", `grid-cols-${grid || 2}`)}>
                 {data.map((item) => {

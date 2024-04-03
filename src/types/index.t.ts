@@ -20,6 +20,5 @@ declare type instaProfileType = {
     creatorTitle?: string;
     averageEngagement: string;
     bio?: string[];
-    averageViews: string;
-
+    averageViews: string; 
 }
